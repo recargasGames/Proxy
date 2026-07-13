@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     }
     
     // Solo permitir dominios específicos
-    const dominiosPermitidos = ['unlimplay.com', 'unlimplay.net', 'unlimplay.org'];
+    const dominiosPermitidos = ['unlimplay.com', 'unlimplay.net', 'unlimplay.org', 'vidmoly.biz'];
     const permitido = dominiosPermitidos.some(d => url.includes(d));
     
     if (!permitido) {
