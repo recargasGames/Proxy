@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 Feliz Cumpleaños 🎂</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            min-height:100vh;
+            background:linear-gradient(135deg,#ff6b9d,#c44569,#f8b500);
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            font-family:'Segoe UI',sans-serif;
+            color:white;
+            padding:2rem 1.5rem;
+            text-align:center;
+            overflow-x:hidden;
+        }
+        .contenedor{
+            background:rgba(255,255,255,.15);
+            backdrop-filter:blur(10px);
+            border-radius:20px;
+            padding:2.5rem 1.8rem;
+            max-width:450px;
+            width:100%;
+            border:2px solid rgba(255,255,255,.3);
+            box-shadow:0 10px 40px rgba(0,0,0,.2);
+            animation: aparecer 1.2s ease-out;
+        }
+        h1{
+            font-size:2.2rem;
+            margin-bottom:1.5rem;
+            color:#fff;
+            text-shadow:2px 2px 8px rgba(0,0,0,.2);
+        }
+        .mensaje{
+            font-size:1.1rem;
+            line-height:1.7;
+            margin-bottom:1.8rem;
+            color:#fef2f7;
+        }
+        .corazones{
+            font-size:2.5rem;
+            margin:1rem 0;
+            animation: latir 1s infinite alternate;
+        }
+        .firma{
+            margin-top:2rem;
+            font-size:1rem;
+            font-weight:600;
+            color:#fff;
+            opacity:.9;
+        }
+        @keyframes aparecer{
+            from{opacity:0;transform:translateY(30px)}
+            to{opacity:1;transform:translateY(0)}
+        }
+        @keyframes latir{
+            from{transform:scale(1)}
+            to{transform:scale(1.2)}
+        }
+        .confeti{
+            position:fixed;
+            width:10px;height:10px;
+            opacity:.7;
+            animation: caer 7s linear infinite;
+        }
+        @keyframes caer{
+            to{
+                transform:translateY(110vh) rotate(360deg);
+                opacity:0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>✨ ¡Feliz Cumpleaños! ✨</h1>
+    <div class="corazones">❤️💖💝</div>
+
+    <div class="mensaje">
+        Ya dieron las 12, y fui el primero en querer decirte lo mucho que te quiero. No sabes lo especial que eres para mí, lo mucho que iluminas mis días y lo agradecido que estoy de tenerte en mi vida. Eres una persona increíble, con un corazón gigante, y mereces absolutamente todo lo bonito que el mundo tiene para dar.<br><br>
+
+        Gracias por estar ahí, por tu compañía, por tu forma de ser tan única y por hacer que todo sea mejor simplemente estando tú. Te deseo un año lleno de salud, sueños cumplidos, sonrisas que no se acaben y muchísima felicidad. Prometo estar siempre a tu lado, para celebrar tus alegrías y acompañarte en todo lo que venga.<br><br>
+
+        Te quiero muchísimo, con todo mi corazón. ¡Pásalo increíble hoy y siempre! 🎂🎉
+    </div>
+
+    <div class="firma">Con todo mi cariño ❤️</div>
+</div>
+
+<script>
+// Efecto de confeti cayendo
+const colores = ['#ff4757','#ffa502','#ff6b81','#1dd1a1','#5352ed','#fffa65'];
+for(let i=0; i<60; i++){
+    const c = document.createElement('div');
+    c.classList.add('confeti');
+    c.style.left = Math.random()*100 + 'vw';
+    c.style.backgroundColor = colores[Math.floor(Math.random()*colores.length)];
+    c.style.animationDelay = Math.random()*7 + 's';
+    c.style.width = c.style.height = (Math.random()*8+6) + 'px';
+    document.body.appendChild(c);
+}
+</script>
+
+</body>
+</html>
+
